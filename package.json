@@ -2,7 +2,7 @@
     "name": "render.react",
     "main": "lib/index.js",
     "version": "0.1.0",
-    "description": "Render (if else switch) 条件渲染",
+    "description": "React if switch 条件渲染",
     "keywords": "",
     "scripts": {
         "dev": "rm -rf output && fis3 release -w -d ./output -r ./ -f compile/fis-conf.js",

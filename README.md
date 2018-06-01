@@ -31,7 +31,7 @@
 <div class="face-one-intro">
     <div class="face-one-intro-title">render.react</div>
     <h2 class="face-one-intro-desc">
-        if else switch 条件渲染
+        React if switch 条件渲染
     </h2>
     <!-- MARKRUN-HTML
         <div class="face-one-readmedemo">
