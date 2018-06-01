@@ -15,6 +15,8 @@
 
 ## switch-case
 
+大量的 `<Else if={}>` 会让代码不易读，这种情况下可使用 `<Render switch={} >`
+
 ````code
 {
     title: 'swtich case',
@@ -36,3 +38,45 @@
     side: true
 }
 ````
+
+## useDisplay
+
+某些场景下我们想通过修改 `display:none` 的方式去隐藏元素，通过配置 `<Render useDisplay if={loading} >` 可以做到这一点
+
+````code
+{
+    title: 'useDisplay',
+    desc: '',
+    html: '<div id="useDisplay-if-demo" ></div>',
+    source: './useDisplay-if.demo.js',
+    side: true
+}
+````
+
+## render-props
+
+```js
+<Render>{() => {
+    let target
+    data.some(function (item){
+        if (item.type === 'pass') {
+            target = item
+            return true
+        }
+    })
+    return (<div>{target.name}</div>)
+}}</Render>
+
+{
+    (() => {
+        let target
+        data.some(function (item){
+            if (item.type === 'pass') {
+                target = item
+                return true
+            }
+        })
+        return (<div>{target.name}</div>)
+    })()
+}
+```
