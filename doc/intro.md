@@ -105,7 +105,7 @@ JSX 支持三元运算符
 
 注意：不需要用 `<If>` 包裹 `loading`.(`<If>loading</If>`)。这样保持了代码简洁。
 
-> `<Render if={loading} >` `props.children` 的第一个元素会在 `if={loading}` 为 `true` 时渲染出来。 `if={loading}` 的判断与 JavaScript 内置 `if` 语法一致，会对 `condition` 进行 `==` 比较。而不是 `===`。
+> `<Render if={loading} >` `props.children` 的第一个元素会在 `if={loading}` 为 `true` 时渲染出来。
 
 ### else if
 

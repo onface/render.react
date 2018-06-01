@@ -55,18 +55,19 @@
 
 ## render-props
 
-```js
-<Render>{() => {
-    let target
-    data.some(function (item){
-        if (item.type === 'pass') {
-            target = item
-            return true
-        }
-    })
-    return (<div>{target.name}</div>)
-}}</Render>
+````code
+{
+    title: 'render props',
+    desc: '',
+    html: '<div id="render-props-demo" ></div>',
+    source: './render-props.demo.js',
+    open: true
+}
+````
 
+`<Render>{function(){}}</Render>` 与
+
+```js
 {
     (() => {
         let target
@@ -78,5 +79,14 @@
         })
         return (<div>{target.name}</div>)
     })()
+}
+```
+
+在结果上没有任何区别，只是我们提供了另外一种写法。
+
+```js
+// <Render>{function(){}}</Render> 源码实现
+if (typeof this.props.children === 'function') {
+    return this.props.children()
 }
 ```

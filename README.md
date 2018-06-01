@@ -16,10 +16,11 @@
     <Else if={loading === undefined}>
         default
     </Else>
-    <Else>loadinged</Else>
+    <Else>loaded</Else>
 </Render>
 <Render switch={type} >
-    <Case c="pass" ></Case>
+    <Case c="pass" >成功</Case>
+    <Case c="fail" >失败</Case>
 </Render>
 ```
 
@@ -44,7 +45,8 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">Else</span>&gt;</span>loadinged<span class="hljs-tag">&lt;/<span class="hljs-name">Else</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">Render</span>&gt;</span>
 </code><span class="hljs-tag">&lt;<span class="hljs-name">Render</span> <span class="hljs-attr">switch</span>=<span class="hljs-string">{type}</span> &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">Case</span> <span class="hljs-attr">c</span>=<span class="hljs-string">"pass"</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Case</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Case</span> <span class="hljs-attr">c</span>=<span class="hljs-string">"pass"</span> &gt;</span>成功<span class="hljs-tag">&lt;/<span class="hljs-name">Case</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Case</span> <span class="hljs-attr">c</span>=<span class="hljs-string">"fail"</span> &gt;</span>失败<span class="hljs-tag">&lt;/<span class="hljs-name">Case</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">Render</span>&gt;</span>
 </code>
 </pre>
