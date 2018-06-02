@@ -19,7 +19,8 @@
     "$username": "onface",
     "$repository": "render.react",
     "dependencies": {
-        "prop-types": "^15.6.0"
+        "prop-types": "^15.6.0",
+        "util.react": "^1.6.0"
     },
     "optionalDependencies": {
         "react": "^16.4.0",

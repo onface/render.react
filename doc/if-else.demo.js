@@ -4,18 +4,28 @@ import Render, { Else, RenderSwitch, Case } from "render.react"
 // const Render = require('render.react');const { Else, RenderSwitch, Case } = Render;
 
 class IfElse extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {loading: undefined}
+    }
     render () {
         const self = this
         let loading = self.state.loading
         return (
             <div>
-                <Render if={loading} >
+                <Render useDisplay if={loading} >
                     loading
                     <Else if={loading === undefined}>
                         default
                     </Else>
                     <Else>loaded</Else>
                 </Render>
+                <button
+                    onClick={function () {
+                        self.setState({loading: !loading})
+                    }} >
+                    change loading
+                </button>
             </div>
         )
     }

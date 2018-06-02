@@ -1,3 +1,4 @@
+
 # 文档
 
 
@@ -17,7 +18,7 @@
 
 大量的 `<Else if={}>` 会让代码不易读，这种情况下可使用 `<Render switch={} >`
 
-````code
+````html
 {
     title: 'swtich case',
     desc: '`<Render switch={type} ><Case eql="pass" >成功</Case></Render>`',
@@ -29,7 +30,7 @@
 
 ## loose-switch
 
-````code
+````html
 {
     title: 'swtich case',
     desc: '`<Render loose switch={value} >`',
@@ -43,7 +44,7 @@
 
 某些场景下我们想通过修改 `display:none` 的方式去隐藏元素，通过配置 `<Render useDisplay if={loading} >` 可以做到这一点
 
-````code
+````html
 {
     title: 'useDisplay',
     desc: '',
@@ -55,7 +56,7 @@
 
 ## render-props
 
-````code
+````html
 {
     title: 'render props',
     desc: '',
