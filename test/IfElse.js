@@ -1,8 +1,16 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-import Render, { Else, RenderSwitch, Case } from "render.react"
+import Render, { Else, RenderSwitch, Case } from "../lib/index"
 // const Render = require('render.react');const { Else, RenderSwitch, Case } = Render;
-
+//
+class Text extends React.Component {
+    render() {
+        const self = this
+        return (
+            <div data-name="text" >{self.props.children}</div>
+        )
+    }
+}
 class IfElse extends React.Component {
     constructor(props) {
         super(props)
@@ -13,13 +21,15 @@ class IfElse extends React.Component {
         let loading = self.state.loading
         return (
             <div>
-                <Render if={loading} >
+                <em>
+                <Render useDisplay={self.props.useDisplay} if={loading} >
                     loading
                     <Else if={loading === undefined}>
-                        default
+                        <span>default</span>
                     </Else>
-                    <Else>loaded</Else>
+                    <Else><Text>loaded</Text></Else>
                 </Render>
+                </em>
                 <button
                     onClick={function () {
                         self.setState({loading: !loading})
@@ -30,8 +40,4 @@ class IfElse extends React.Component {
         )
     }
 }
-/*ONFACE-DEL*/IfElse = require("react-hot-loader").hot(module)(IfElse)
-ReactDOM.render(
-    <IfElse />,
-    document.getElementById('if-else-demo')
-)
+module.exports = IfElse
