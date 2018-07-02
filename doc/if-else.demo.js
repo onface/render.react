@@ -1,12 +1,12 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-import Render, { Else, RenderSwitch, Case } from "render.react"
-// const Render = require('render.react');const { Else, RenderSwitch, Case } = Render;
+import Render, { Else, Case } from "render.react"
+// const Render = require('render.react');const { Else, Case } = Render;
 
 class IfElse extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {loading: undefined}
+        this.state = {loading: false}
     }
     render () {
         const self = this
@@ -15,9 +15,6 @@ class IfElse extends React.Component {
             <div>
                 <Render if={loading} >
                     loading
-                    <Else if={loading === undefined}>
-                        default
-                    </Else>
                     <Else>loaded</Else>
                 </Render>
                 <button

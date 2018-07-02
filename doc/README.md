@@ -4,10 +4,10 @@
 
 ## if-else
 
-````code
+````html
 {
     title: 'if else',
-    desc: '`<Render if={loading}> <Else if={loading === undefined} > <Else>`',
+    desc: '`<Render if={loading}>loading<Else>loaded<Else></Render>`',
     html: '<div id="if-else-demo" ></div>',
     source: './if-else.demo.js',
     side: true
@@ -18,7 +18,7 @@
 
 大量的 `<Else if={}>` 会让代码不易读，这种情况下可使用 `<Render switch={} >`
 
-````html
+````code
 {
     title: 'swtich case',
     desc: '`<Render switch={type} ><Case eql="pass" >成功</Case></Render>`',

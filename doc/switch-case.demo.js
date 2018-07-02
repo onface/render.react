@@ -2,14 +2,18 @@ var React = require('react')
 var ReactDOM = require('react-dom')
 import Render, { Else, Case } from "render.react"
 // const Render = require('render.react');const { Else, Case } = Render;
-
 class SwitchCase extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            type: ''
+        }
+    }
     render () {
         const self = this
-        let loading = self.state.type
         return (
             <div>
-                <Render switch={type} >
+                <Render switch={self.state.type} >
                     <Case eql="pass" >
                         成功
                     </Case>
