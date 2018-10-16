@@ -65,7 +65,6 @@
     <table style="width:100%;" data-comments="In order to github typesetting so use the table tag" >
         <tr>
             <td align="center" >
-
                 <div class="face-one-feature-item">
                     <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo">
                     <br />
